@@ -1,0 +1,85 @@
+package com.bcj.memberservice.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+
+@Entity
+
+public class Member {
+
+	@Id
+	@GeneratedValue	
+	private int memberId;
+	private String firstName;
+	private String lastName;
+	
+	private String ssn;
+	private String planSelected;
+	
+	@OneToOne(cascade = CascadeType.ALL )
+    @JoinColumn(name = "addressId")
+	private Address addr;
+
+	public int getmId() {
+		return memberId;
+	}
+
+	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	
+	public String getSsn() {
+		return ssn;
+	}
+
+
+   public void setSsn(String ssn) {
+		this.ssn = ssn;
+	}
+
+	public String getPlanSelected() {
+		return planSelected;
+	}
+
+	public void setPlanSelected(String planSelected) {
+		this.planSelected = planSelected;
+	}
+
+	public Address getAddr() {
+		return addr;
+	}
+
+	public void setAddr(Address addr) {
+		this.addr = addr;
+	}
+
+	@Override
+	public String toString() {
+		return "Member [mId=" + memberId + ", firstName=" + firstName + ", lastName=" + lastName + ", planSelected="
+				+ planSelected + ", addr=" + addr + "]";
+	}
+	
+	
+	
+	
+}

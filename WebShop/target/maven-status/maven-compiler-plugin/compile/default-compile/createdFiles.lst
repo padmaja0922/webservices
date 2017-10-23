@@ -1,0 +1,5 @@
+com\bcj\webshop\service\OrderService.class
+com\bcj\webshop\messaging\MessageSender.class
+com\bcj\webshop\model\Order.class
+com\bcj\webshop\messaging\MessageSender$1.class
+com\bcj\webshop\controller\AppController.class

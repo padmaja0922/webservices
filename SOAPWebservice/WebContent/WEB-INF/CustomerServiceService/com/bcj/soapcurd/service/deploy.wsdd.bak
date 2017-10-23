@@ -1,0 +1,30 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CustomerServiceService WSDL service -->
+
+  <service name="CustomerService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.soapcurd.bcj.com"/>
+      <parameter name="wsdlServiceElement" value="CustomerServiceService"/>
+      <parameter name="schemaQualified" value="http://service.soapcurd.bcj.com"/>
+      <parameter name="wsdlServicePort" value="CustomerService"/>
+      <parameter name="className" value="com.bcj.soapcurd.service.CustomerServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="CustomerService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="addTwoNumbers" qname="operNS:addTwoNumbers" xmlns:operNS="http://service.soapcurd.bcj.com" returnQName="retNS:addTwoNumbersReturn" xmlns:retNS="http://service.soapcurd.bcj.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://service.soapcurd.bcj.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://service.soapcurd.bcj.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="addTwoNumbers"/>
+
+  </service>
+</deployment>

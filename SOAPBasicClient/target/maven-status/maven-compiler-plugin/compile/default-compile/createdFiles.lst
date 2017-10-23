@@ -1,0 +1,9 @@
+com\bcj\soap\Demosoap_Service.class
+com\bcj\soapclient\entity\Address.class
+com\bcj\soap\Demosoap.class
+com\bcj\soap\Address.class
+com\bcj\soap\ObjectFactory.class
+com\bcj\soap\package-info.class
+com\bcj\soapclient\service\SOAPClientService.class
+com\bcj\soap\Testing.class
+com\bcj\soap\TestingResponse.class

@@ -1,0 +1,52 @@
+package com.bcj.memberservice.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bcj.memberservice.entity.Address;
+import com.bcj.memberservice.entity.Member;
+
+@Repository
+@Transactional
+public class MemberDao {
+	
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	Member mem;
+	Address address;
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	
+	public int registerMember(Member member) {
+
+
+		Session session = this.sessionFactory.getCurrentSession();
+		 address = member.getAddr();
+		 session.persist(address);
+		 session.persist(member);		
+		
+		return member.getmId();
+	}
+
+
+	public Member getMemberById(int id) {
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		
+		mem = (Member)session.get(Member.class, id);
+		return mem;
+	}
+	
+	
+	
+
+}

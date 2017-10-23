@@ -1,0 +1,5 @@
+com\bcj\ajaxrest\controller\CustomerController.class
+com\bcj\ajaxrest\dao\CustomerDao.class
+com\bcj\ajaxrest\service\CustomerService.class
+com\bcj\ajaxrest\entity\CustomerView.class
+com\bcj\ajaxrest\entity\Customer.class

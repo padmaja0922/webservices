@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" 
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd 
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://cxf.apache.org/jaxrs
+	http://cxf.apache.org/schemas/jaxrs.xsd
+	http://cxf.apache.org/jaxws 
+	http://cxf.apache.org/schemas/jaxws.xsd">
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    
+   
+    
+    
+    <jaxws:endpoint id="CustomerService" implementor="com.bcj.soapspring.service.CustomerServiceImpl"
+    address="CustomerService"/>
+
+<mvc:annotation-driven /> 
+ <context:component-scan base-package = "com.bcj.soapspring" />
+
+  <!--  <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name = "prefix" value = "/views/" />
+      <property name = "suffix" value = ".jsp" />
+   </bean>
+ -->
+ 
+<!--   
+  <bean id="rcontroller" class="com.bcj.creditcard.RegistrationController">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean> -->
+ 
+  
+  
+ <bean id="custDao" class="com.bcj.soapspring.dao.CustomerDao">		
+	<property name="sessionFactory" ref="sessionFactory" />
+</bean>
+ 
+  <bean id="CustomerService" class="com.bcj.soapspring.service.CustomerServiceImpl"/>	
+ <!-- <bean id="rc" class = "com.bcj.creditcard.RegistrationController"/> -->
+  <tx:annotation-driven transaction-manager="transactionManager" />   
+   
+   
+ <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+ 
+ 
+ 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/citibank" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+
+
+<!--Hibernate 4 SessionFactory Bean definition-->
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+			    <value>com.bcj.soapspring.model.Customer</value>				
+			</list> 
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property> 
+	</bean>
+ 
+</beans>

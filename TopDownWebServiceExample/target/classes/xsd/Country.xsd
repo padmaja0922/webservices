@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/Country/" 
+targetNamespace="http://www.example.org/Country/">
+
+    <element name="CountryRequestType">
+     
+       <complexType>
+        
+         <sequence>
+             <element name= "countryName" type = "string"/>
+             <element name= "countryCapital" type = "string"/>
+             <element name= "noOfStates" type = "int"/>   
+                       
+         </sequence>  
+       
+       </complexType>
+    
+    </element>
+</schema>

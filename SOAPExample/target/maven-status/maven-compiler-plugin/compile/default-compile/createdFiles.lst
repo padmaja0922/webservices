@@ -1,0 +1,4 @@
+com\bcj\soapexample\dao\CourseDao.class
+com\bcj\soapexample\service\CourseServiceImp.class
+com\bcj\soapexample\service\CourseServiceInterface.class
+com\bcj\soapexample\entity\Course.class

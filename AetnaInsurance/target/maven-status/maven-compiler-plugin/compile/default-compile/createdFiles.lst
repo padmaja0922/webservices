@@ -1,0 +1,5 @@
+com\bcj\memberservice\service\MemberServiceInterface.class
+com\bcj\memberservice\dao\MemberDao.class
+com\bcj\memberservice\service\MemberServiceImp.class
+com\bcj\memberservice\entity\Member.class
+com\bcj\memberservice\entity\Address.class

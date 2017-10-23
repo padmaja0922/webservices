@@ -1,0 +1,4 @@
+com\bcj\soap\dao\SoapDao.class
+com\bcj\soap\entity\Address.class
+com\bcj\soap\service\SoapServiceImplementation.class
+com\bcj\soap\service\SoapServiceInterface.class

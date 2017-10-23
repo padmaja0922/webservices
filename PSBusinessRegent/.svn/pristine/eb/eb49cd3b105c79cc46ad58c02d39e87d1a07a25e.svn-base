@@ -1,0 +1,153 @@
+
+.header{
+    width: 1200px;
+    font-size: 16px;
+    background: #495C70;
+    padding: 10px 10px 10px 30px;
+    border: 5px solid #53687E;
+	height :750px;
+	margin-left:30px;
+}
+
+.company{
+		
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+	border:none;
+	/* border-bottom: 1px dashed #83A4C5;  */  
+    outline: none;
+    padding: 0px 10px 10px 150px;
+	
+}
+
+.user{
+	
+	font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+	border:none;
+	/* border-bottom: 1px dashed #83A4C5; */
+  
+    outline: none;
+    padding: 0px 10px 10px 150px;
+	
+	
+	
+}
+.address{
+    background: transparent;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+	color: #fff;
+    border: none;
+    /* border-bottom: 1px dashed #83A4C5; */
+   
+    outline: none;
+    padding: 0px 5px 5px 150px;
+   
+	
+}
+
+.contact{
+	float:right-side;
+	background: transparent;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+	color: #fff;
+    border: none;
+   outline: none;
+    padding: 0px 0px 0px 200px;	
+	
+	
+}
+
+
+.taddress{
+	
+	float:right-side;
+	background: transparent;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+	color: #fff;
+    border: none;
+    /* border-bottom: 1px dashed #83A4C5; */
+   
+    outline: none;
+    padding: 0px 0px 0px 200px;
+	 
+}
+
+
+
+/* #company1{
+	float:right;
+	  
+	 
+} */
+
+h4{
+	font-size:25px;
+	 padding: 30px 0px 0px 100px;
+     margin-bottom:5px;	 
+	 margin-top:30px;
+}
+
+#tenant{
+	float:right;
+	clear:both;
+	width:750px;
+	text-align:center;
+	height:350px;
+	margin:-650px;
+	margin-right:100px;
+}
+ input{
+    font-style: italic;
+    padding: 20px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: auto;
+    overflow: hidden;
+    resize:none;
+    height:10px;
+}
+input[type=submit]
+
+ {background: #576E86;
+    border: none;
+	margin-top:50px;
+    padding: 25px 40px 30px 80px;
+    border-radius: 5px;
+	 text-align:top;
+      float:bottom;
+    color: #A8BACE;
+ }
+ 
+ 
+ 
+ 
+ input[type=button],
+ input[type=button]{
+	 
+	 background: #576E86;
+     border: none;    
+    border-radius: 5px;
+	clear:both;
+    float:bottom;
+    color: #A8BACE;	
+	  padding: 10px 20px 20px 80px;	
+	 
+ }
+ 
+h1{
+	margin-top:30px;
+	text-align:center;
+}	
+ 
+ input[type=submit]:hover,
+ input[type=button]:hover{
+background: #394D61;
+}

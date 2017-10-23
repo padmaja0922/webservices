@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Account</title>
+</head>
+<body style ="background-color:#aed6f1;">
+<h1 align ="center" style="color:black;font-size:200%"><ins><strong>Tenent Information</h1>
+<form action="RegistrationServlet" method="post">
+<div><table>
+<tr><td><h3><ins>Company details</h3></td></tr>
+<tr><td>Company Name : </td><td><input type="text" name="cmpName" ></td></tr>
+<tr><td>Phone : </td><td><input type="text" name="cmpPhone"></td></tr>
+<tr><td>Email : </td><td><input type="text" name="cmpEmail"></td></tr>
+<tr><td><h3><ins>Address</h3></td></tr>
+<tr><td>Address Line 1 : </td><td><input type="text" name="line1"></td></tr>
+<tr><td>Address Line 2 : </td><td><input type="text" name="line2"></td></tr>
+<tr><td>City  : </td><td><input type="text" name="city"></td></tr>
+<tr><td>State : </td><td><input type="text" name="state"></td></tr>
+<tr><td>Zip code : </td><td><input type="text" name="zip"></td></tr>
+</table></div>
+<div><table>
+<tr><td><h3><ins>Customer details</h3></td></tr>
+<tr><td>First Name : </td><td><input type="text" name="fName"></td></tr>
+<tr><td>Last Name : </td><td><input type="text" name="lName"></td></tr>
+<tr><td>Phone : </td><td><input type="text" name="phone"></td></tr>
+<tr><td>Email : </td><td><input type="text" name="email"></td></tr>
+<tr><td>User Id : </td><td><input type="text" name="userId"></td></tr>
+<tr><td>Password : </td><td><input type="password" name="password"></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td></td><td><input type="submit" value ="Sign Up"></td></tr>
+</table></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "register.css" />
+
+
+</head>
+<body>
+
+	<div class="header">
+
+		<h1>Registration </h1>
+		
+		<form action="RegistrationServlet" method="post">
+
+			<!-- Form inputs for Company -->
+			
+         <div id="comapny1">
+		 
+		 <h4>Company Info :</h4>
+			<div class="company">
+			
+				Company Name : <input type="text" name="CompanyName" required><br>
+				Company Email : <input type="text" name="CompanyEmailId" required><br>
+				Company Phone : <input type="text" name="CompanyPhoneNo" required><br>
+
+				
+			</div>
+			<h4>Account Credentials :</h4>
+			<div class="user">
+				User Id : <input type="text" name="User" required><br>
+				Password : <input type="password" name="Password" required><br>
+			</div>
+
+			<!--  Form inputs for Address for Company -->
+                 <h4>Address  :</h4>
+			<div class="address">
+				
+
+				Address Line1 : <input type="text" name="AddressLine1" required><br>
+				Address Line2 : <input type="text" name="AddressLine2"><br>
+				City : <input type="text" name="City" required> <br> State : <input
+					type="text" name="State" required> <br> ZipCode : <input
+					type="text" name="ZipCode" required> <br>
+			</div>
+      </div>
+			<!-- Form inputs for Contact Details of Tenant  -->
+			
+			
+		<div id = "tenant">	
+            <h4>Contact Details :</h4>
+			<div class="contact">
+
+				
+
+				First Name : <input type="text" name="FirstName" required><br>
+				Last Name : <input type="text" name="LastName" required><br>
+				Email : <input type="text" name="EmailId" required><br> Phone :
+				<input type="text" name="ContactNo" required><br>
+
+			</div>
+
+			<!--  Form inputs for Address for Tenant -->
+			<h4>Address Of Tenant:</h4>
+			<div class=taddress>		
+				
+
+				Address Line1 : <input type="text" name="Address1" required><br>
+				Address Line2 : <input type="text" name="Address2"><br>
+				City : <input type="text" name="City1" required> <br> State : <input
+					type="text" name="State1" required> <br> ZipCode : <input
+					type="text" name="ZipCode1" required> <br> 								
+								
+							Submit : <input	type="submit" name="Submit" value="Submit">
+          </div>
+		  
+		  </div>
+		</form>
+
+	</div>
+
+</body>
+</html>

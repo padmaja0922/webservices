@@ -1,0 +1,19 @@
+
+public class Vehicle {...}
+public class Car extends Vehicle {...}
+public class SUV extends Car {...}
+
+Which of the following are legal statements? 
+Answer without trying in eclipse and using the "is-a" relationship test.
+
+  SUV s = new SUV();
+  Car c = new SUV();
+  SUV s = new Car();
+  Car c = new Vehicle();
+  Vehicle v = new SUV();
+  Vehicle v = new Car();
+  
+  answer
+  
+  SUV s = new Car();
+  Car c = new Vehicle();

@@ -1,0 +1,4 @@
+com\bcj\restservices\dao\CustomerDao.class
+com\bcj\restservices\CustomerController.class
+com\bcj\restservices\service\CustomerService.class
+com\bcj\restservices\entity\Customer.class

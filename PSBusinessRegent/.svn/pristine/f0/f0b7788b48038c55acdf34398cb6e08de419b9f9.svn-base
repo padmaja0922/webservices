@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Psb Regent</title>
+
+<!-----Including CSS ----->
+
+<link rel="stylesheet" type="text/css" href="index.css" />
+
+</head>
+
+
+<body>
+	<div class="header">
+		<h2>Welcome</h2>
+		<h2>To</h2>
+		<h2>PSB REGENT PARK</h2>
+	
+
+	<div id = "register">
+		<h3>PSB Regent Registration</h3>
+		<a href="register.html">Register</a>
+	</div>
+	</div>
+</body>
+
+</html>

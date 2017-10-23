@@ -1,0 +1,91 @@
+package com.bcj.memberservice.dao;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bcj.memberservice.entity.Address;
+import com.bcj.memberservice.entity.Member;
+
+@Repository
+@Transactional
+public class MemberDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	Member mem=new Member();
+	Address address = new Address();
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	public int registerMember(Member member) {
+
+		Session session = this.sessionFactory.getCurrentSession();
+		address = member.getAddr();
+		session.persist(address);
+		session.persist(member);
+
+		return member.getmId();
+	}
+
+	public Member getMemberById(int id) {
+		
+		   Object[] obj;
+	Session session = sessionFactory.openSession();
+
+	Transaction tx = session.beginTransaction();
+
+	Query query = session.createQuery(
+         "SELECT m.firstName,m.lastName,m.planSelected,m.addr.addressLine1,m.addr.addressLine2,m.addr.city,m.addr.state,m.addr.zipCode FROM Member m WHERE m.id = :id");
+
+	   query.setInteger("id", id);
+
+	   List<Member> result = (ArrayList<Member>) query.list();
+
+	     Iterator itr = result.iterator();
+
+         while (itr.hasNext()) {
+
+	      obj = (Object[]) itr.next();
+
+	      System.out.println(obj);
+         mem.setFirstName(String.valueOf(obj[0]));
+
+	     mem.setLastName(String.valueOf(obj[1]));
+
+	     mem.setPlanSelected(String.valueOf(obj[2]));
+
+	      address.setAddressLine1(String.valueOf(obj[3]));
+
+         address.setAddressLine2(String.valueOf(obj[4]));
+
+	      address.setCity(String.valueOf(obj[5]));
+
+	      address.setState(String.valueOf(obj[6]));
+
+	      address.setZipCode(String.valueOf(obj[7]));
+
+	      mem.setAddr(address);
+
+         }
+
+	    tx.commit();
+	     session.close();
+
+
+		return mem;
+	}
+
+}

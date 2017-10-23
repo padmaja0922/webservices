@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+<body style ="background-color:#A3E4D7;">
+<form action="LoginServlet" method="post">
+<div align ="center" ><table>
+<br><br><br><br><br><br><br><br>
+<tr><td><strong>User Id : </td><td><input type="text" name="user" ></td></tr>
+<tr><td><strong>Password : </td><td><input type="password" name="code"></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td></td><td><input type="submit" value ="login"></td></tr>
+
+</table></div>
+</body>
+</head>
+</html>

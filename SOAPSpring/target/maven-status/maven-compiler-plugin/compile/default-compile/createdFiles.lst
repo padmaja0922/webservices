@@ -1,0 +1,4 @@
+com\bcj\soapspring\service\CustomerService.class
+com\bcj\soapspring\service\CustomerServiceImpl.class
+com\bcj\soapspring\dao\CustomerDao.class
+com\bcj\soapspring\model\Customer.class

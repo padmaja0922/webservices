@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Built-By: Boot Camp User 008
+Build-Jdk: 1.8.0_121
+Class-Path: spring-context-4.3.7.RELEASE.jar spring-aop-4.3.7.RELEASE.
+ jar spring-beans-4.3.7.RELEASE.jar spring-expression-4.3.7.RELEASE.ja
+ r hibernate-core-4.3.5.Final.jar jboss-logging-3.1.3.GA.jar jboss-log
+ ging-annotations-1.2.0.Beta1.jar jboss-transaction-api_1.2_spec-1.0.0
+ .Final.jar dom4j-1.6.1.jar xml-apis-1.0.b2.jar hibernate-jpa-2.1-api-
+ 1.0.0.Final.jar javassist-3.18.1-GA.jar antlr-2.7.7.jar jandex-1.1.0.
+ Final.jar hibernate-commons-annotations-4.0.4.Final.jar mysql-connect
+ or-java-5.1.39.jar log4j-1.2.17.jar spring-orm-4.3.7.RELEASE.jar spri
+ ng-jdbc-4.3.7.RELEASE.jar spring-core-4.3.7.RELEASE.jar commons-loggi
+ ng-1.2.jar spring-webmvc-4.3.7.RELEASE.jar spring-web-4.3.7.RELEASE.j
+ ar spring-tx-4.3.7.RELEASE.jar commons-dbcp-1.4.jar commons-pool-1.5.
+ 4.jar javax.mail-api-1.5.5.jar javax.mail-1.5.5.jar activation-1.1.jar
+Main-Class: com.bcj.creditcardsample.ApplicantController.java
+Created-By: Maven Integration for Eclipse
+key: value
+mode: development
+url: http://maven.apache.org
+
